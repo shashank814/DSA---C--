@@ -80,3 +80,60 @@ int main() {
     return 0;
 }
 
+
+bool isPrime1(int n) {
+   if(n < 2) return false;
+   for(int i=2; i<=n/2; i++) {
+    if(n%i == 0) {
+        return false;
+    }
+   }
+   return true;
+}
+int main() {
+    int num = 20;
+    for(int i=1; i<=num; i++) {
+        if(isPrime1(i)) {
+            cout << i << " ";
+        }
+    }
+    return 0;
+}
+
+
+void fibonacci(int n) {
+    int a = 0, b = 1, c;
+    cout << a << " " << b << " ";
+    for(int i=3; i<=n; i++) {
+        c = a + b;
+        cout << c << " ";
+        a = b;
+        b = c;
+    }
+}
+int main() {
+    fibonacci(10);
+    return 0;
+}
+
+
+int fib(int n) {
+    if(n == 0) return 0;
+    if(n == 1) return 1;
+
+    int a = 0, b = 1, c;
+    for(int i=2; i<=n; i++) {
+        c = a + b;
+        a = b;
+        b = c;
+    }
+    return b;
+}
+int main () {
+    int n;
+    cout << "enter n: ";
+    cin >> n;
+
+    cout << fib(n);
+    return 0;
+}

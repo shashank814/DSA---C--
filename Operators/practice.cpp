@@ -14,35 +14,35 @@ int main() {
     cout << "enter y: " << endl;
     cin >> y;
 
-    // switch (op) 
-    // {
-    // case '+':
-    //     cout << "Ans = " << x+y << endl;
-    //     break;
+    switch (op) 
+    {
+    case '+':
+        cout << "Ans = " << x+y << endl;
+        break;
 
-    // case '-':
-    //     cout << "Ans = " << x-y << endl;
-    //     break;
+    case '-':
+        cout << "Ans = " << x-y << endl;
+        break;
 
-    // case '*':
-    //     cout << "Ans = " << x*y << endl;
-    //     break;
+    case '*':
+        cout << "Ans = " << x*y << endl;
+        break;
 
-    // case '/':
-    //     if(y != 0) {
-    //         cout << "Ans = " << x / y << endl;
-    //     } else {
-    //         cout << "error" << endl;
-    //     }
-    //     break;
+    case '/':
+        if(y != 0) {
+            cout << "Ans = " << x / y << endl;
+        } else {
+            cout << "error" << endl;
+        }
+        break;
 
-    // case '%':
-    // cout << "Ans = " << (int)x % (int)y << endl;
-    // break;;
+    case '%':
+    cout << "Ans = " << (int)x % (int)y << endl;
+    break;;
     
-    // default:
-    //     break;
-    // }
+    default:
+        break;
+    }
 
     if(op == '+') {
     cout << "Ans = " << x+y << endl;
