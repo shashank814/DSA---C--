@@ -11,14 +11,14 @@ int decToBinary(int decNum) {
     }
     return ans;
 }
-int main() {
-    int decNum = 42;
-    // cout << decToBinary(decNum);
-    for(int i=1; i<=10; i++) {
-        cout << decToBinary(i) << endl;;
-    }
-    return 0;
-}
+// int main() {
+//     int decNum = 42;
+//     // cout << decToBinary(decNum);
+//     for(int i=1; i<=10; i++) {
+//         cout << decToBinary(i) << endl;;
+//     }
+//     return 0;
+// }
 
 
 int binToDecimal(int binNum) {
