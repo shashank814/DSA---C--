@@ -9,7 +9,7 @@ int fibonacci(int n) {
     return fibonacci(n-1) + fibonacci(n-2);
 }
 int main() {
-    cout << fibonacci(6);
+    cout << fibonacci(6); 
 
     return 0;
 }

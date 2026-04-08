@@ -5,7 +5,7 @@ using namespace std;
 
     void getAllSubsets(vector<int>& nums, vector<int>&ans, int i, vector<vector<int>> &allSubsets) {
 			if(i == nums.size()) {
-				allSubsets.push_back({ans});
+				allSubsets.push_back(ans);
 				return;
 			}
 			
@@ -31,3 +31,20 @@ using namespace std;
     	getAllSubsets(nums, ans, 0, allSubsets);
     	return allSubsets;
 	}
+
+int main() {
+	vector<int> nums = {1,2,2};
+
+	vector<vector<int>> result = subsetsWithDup(nums);
+
+	for(vector<int> subset : result) {
+        cout << "[ ";
+        for(int num : subset) {
+            cout << num << " ";
+        }
+        cout << "] ";
+    }
+
+	return 0;
+
+}
