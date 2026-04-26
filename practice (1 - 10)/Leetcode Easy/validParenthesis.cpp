@@ -1,32 +1,31 @@
 #include<iostream>
+#include<string>
 #include<stack>
 using namespace std;
 
-bool isValid(string s) {
+bool isValid(string str) {
     stack<char> st;
-    
-    for(char ch : s) {
 
-        // opening brackets
-        if(ch == '(' || ch == '{' || ch == '[') {
-            st.push(ch);
+    for(int i=0; i<str.size(); i++) {
+        if(str[i] == '(' || str[i] == '{' || str[i] == '[') {
+            st.push(str[i]);
         } else {
-            if(st.empty()) return false;
-
-            char top = st.top();
-            st.pop();
-
-            if(
-                (ch == ')' && top != '(') || 
-                (ch == '}' && top != '{') || 
-                (ch == ']' && top != '[') 
-            ){
+            if(str.size() == 0) {
                 return false;
             }
+
+            if((st.top() == '(' && str[i] == ')') ||
+               (st.top() == '{' && str[i] == '}') ||
+               (st.top() == '[' && str[i] == ']')
+        ) {
+            st.pop();
+        } else {
+            return false;
+        }
         }
     }
 
-    return st.empty();
+    return st.size() == 0;
 }
 
 int main() {
