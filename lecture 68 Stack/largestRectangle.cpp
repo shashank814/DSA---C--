@@ -42,10 +42,10 @@ int largestRectangleArea(vector<int> &heights) {
 }
 
 int main() {
-    vector<int> heights = {2,1,5,6,2,3};
-    int n = 5;
+    vector<int> heights = {4, 2, 0, 3, 2, 5};
+    int n = 6;
     
     int result = largestRectangleArea(heights);
     cout << result << endl;
     return 0;
-}
+} 
