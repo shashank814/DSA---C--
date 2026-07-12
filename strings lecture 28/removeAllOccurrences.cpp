@@ -8,8 +8,9 @@ string removeOccurences(string s, string part) {
     }
     return s;
 }
+
 int main() {
-    string s = "daabcaabcbc";
+    string s = "daabcbaabcbc";
     string part = "abc";
 
     cout << removeOccurences(s, part);
